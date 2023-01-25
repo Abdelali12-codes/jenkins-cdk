@@ -17,7 +17,7 @@ pipeline {
             steps {
                 withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
                       
-                          sh 'cdk synth'
+                          sh 'sudo cdk synth'
                     
                 }
                 
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
                       
-                          sh 'cdk deploy --require-approval=never'
+                          sh 'sudo cdk deploy --require-approval=never'
                     
                 }
                 
