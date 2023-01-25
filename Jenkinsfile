@@ -1,6 +1,11 @@
 pipeline {
     
-    agent any
+    agent {
+        dockerfile {
+          filename 'Dockerfile'
+        }
+
+    }
     stages {
         stage('CDK bootstrap') {
             steps {

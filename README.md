@@ -32,3 +32,4 @@ cdk deploy --require-approval never
 
 # References
 * https://aws.amazon.com/blogs/compute/building-a-jenkins-pipeline-with-aws-sam/
+* https://plugins.jenkins.io/pipeline-aws/
