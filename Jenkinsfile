@@ -1,9 +1,13 @@
 pipeline {
     
-    agent {
-        dockerfile true
-    }
+    agent any
     stages {
+        stage('install cdk') {
+            steps {
+                sh 'npm i -g aws-cdk'
+                
+           }
+        }
         stage('CDK bootstrap') {
             steps {
                 withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {

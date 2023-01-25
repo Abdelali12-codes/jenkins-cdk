@@ -33,3 +33,6 @@ cdk deploy --require-approval never
 # References
 * https://aws.amazon.com/blogs/compute/building-a-jenkins-pipeline-with-aws-sam/
 * https://plugins.jenkins.io/pipeline-aws/
+* Docker plugin and Docker Pipeline
+* CloudBees AWS Credentials Plugin
+Version
