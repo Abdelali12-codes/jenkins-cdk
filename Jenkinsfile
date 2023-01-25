@@ -3,28 +3,36 @@ pipeline {
     agent any
     stages {
         stage('CDK bootstrap') {
-            withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
-                  steps {
-                      sh 'cdk bootstrap'
-                  }
-            }
-          
+            steps {
+                withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
+                      
+                          sh 'cdk bootstrap'
+                    
+                }
+                
+           }
         }
     
         stage('CDK synth') {
-            withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
-                  steps {
-                      sh 'cdk bootstrap'
-                  }
-            }
+            steps {
+                withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
+                      
+                          sh 'cdk synth'
+                    
+                }
+                
+           }
         }
     
         stage('CDK deploy') {
-            withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
-                  steps {
-                      sh 'cdk deploy --require-approval=never'
-                  }
-            }
+            steps {
+                withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
+                      
+                          sh 'cdk deploy --require-approval=never'
+                    
+                }
+                
+           }
         }
 
   }
