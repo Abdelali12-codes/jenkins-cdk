@@ -12,24 +12,39 @@ public class conf {
     public HashMap<String,Object> iam_group5 = new HashMap<String,Object>();
     public ArrayList<HashMap<String,Object>> groups = new ArrayList<HashMap<String,Object>>();
     
+    // list of users you want to create
+    List<String> users = List.of("user1","user2","user3");
     
+    // list of groups you want to create
     public ArrayList<HashMap<String,Object>> groupsList(){
         
         // group1
         this.iam_group1.put("groupname", "group1");
-        this.iam_group1.put("users",List.of("user1"));
+        this.iam_group1.put("users",List.of("user1","user2","user3"));
         this.iam_group1.put("actions", List.of("s3:*","sagemaker:*","ec2:*"));
         
         // group2
-        this.iam_group2.put("groupname","group2");
-        this.iam_group2.put("users", List.of("user2"));
-        this.iam_group2.put("actions", List.of("iam:*","eks:*"));
+        /*this.iam_group2.put("groupname","group2");
+        this.iam_group2.put("users", List.of("user1","user2","user3"));
+        this.iam_group2.put("actions", List.of("iam:*","eks:*"));*/
+        // group3
+        this.iam_group3.put("groupname","group3");
+        this.iam_group3.put("users", List.of("user1","user2"));
+        this.iam_group3.put("actions", List.of("iam:*","eks:*"));
+        
+        // group4
+        this.iam_group4.put("groupname","group4");
+        this.iam_group4.put("users", List.of("user1","user2","user3"));
+        this.iam_group4.put("actions", List.of("iam:*","eks:*"));
        
         
         this.groups.add(this.iam_group1);
-        this.groups.add(this.iam_group2);
+        //this.groups.add(this.iam_group2);
+        this.groups.add(this.iam_group3);
+        this.groups.add(this.iam_group4);
         return this.groups;
     }
+    
     
     
 }
