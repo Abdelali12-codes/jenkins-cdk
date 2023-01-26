@@ -6,7 +6,7 @@ pipeline {
             steps {
                 withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
                       
-                          sh 'sudo cdk bootstrap'
+                          sh 'cdk bootstrap'
                           echo 'bootstrap'
                     
                 }
