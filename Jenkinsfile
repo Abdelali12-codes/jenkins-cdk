@@ -6,7 +6,11 @@ pipeline {
             steps {
                 withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
                       
-                          sh 'cdk bootstrap'
+                          sh '''
+                          PATH=/opt/apache-maven-3.6.3/bin/:$PATH
+                          cdk bootstrap
+                          
+                          '''
                           echo 'bootstrap'
                     
                 }
