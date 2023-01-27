@@ -27,6 +27,9 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins
 
+
+http://54.190.62.7:8080/github-webhook/
+
 cdk deploy --require-approval never
 ```
 # install nodejs 
