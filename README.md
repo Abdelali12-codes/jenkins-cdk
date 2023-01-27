@@ -15,7 +15,7 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
  * `cdk diff`        compare deployed stack with current state
  * `cdk docs`        open CDK documentation
 
-Enjoy!
+# install jenkins
 ```
 sudo apt update
 sudo apt install openjdk-11-jre
