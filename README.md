@@ -62,4 +62,4 @@ export PATH
 * https://plugins.jenkins.io/pipeline-aws/
 * Docker plugin and Docker Pipeline
 * CloudBees AWS Credentials Plugin
-Version
+* GitHub Integration Plugin
