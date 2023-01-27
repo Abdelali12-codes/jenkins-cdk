@@ -36,12 +36,20 @@ public class conf {
         this.iam_group4.put("groupname","group4");
         this.iam_group4.put("users", List.of("user1","user2","user3"));
         this.iam_group4.put("actions", List.of("iam:*","eks:*"));
+        
+        // group5
+        // group4
+        this.iam_group5.put("groupname","group5");
+        this.iam_group5.put("users", List.of("user1","user2","user3"));
+        this.iam_group5.put("actions", List.of("iam:*","eks:*"));
        
         
         this.groups.add(this.iam_group1);
         this.groups.add(this.iam_group2);
         this.groups.add(this.iam_group3);
         this.groups.add(this.iam_group4);
+        this.groups.add(this.iam_group5);
+        
         return this.groups;
     }
     
