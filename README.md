@@ -61,4 +61,4 @@ export PATH="/opt/apache-maven-3.6.3/bin:$PATH"
 * Docker plugin and Docker Pipeline
 * CloudBees AWS Credentials Plugin
 * GitHub Integration Plugin
-# updatess
+# updates
