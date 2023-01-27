@@ -39,6 +39,7 @@ cdk deploy --require-approval never
 ```
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt install nodejs
+sudo npm i -g aws-cdk
 ```
 # install java
 ```
@@ -61,4 +62,4 @@ export PATH="/opt/apache-maven-3.6.3/bin:$PATH"
 * Docker plugin and Docker Pipeline
 * CloudBees AWS Credentials Plugin
 * GitHub Integration Plugin
-# updates
+# update jenkins
