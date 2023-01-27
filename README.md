@@ -19,6 +19,7 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
 
 ```
 # new changes
+# install plugin
 sudo apt update
 sudo apt install openjdk-11-jre
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
