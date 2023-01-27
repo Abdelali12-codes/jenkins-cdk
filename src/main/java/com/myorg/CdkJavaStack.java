@@ -56,17 +56,23 @@ public class CdkJavaStack extends Stack {
             List<String> actions =  (List<String>)groups.get(i).get("actions");    
             
             PolicyDocument  policy = PolicyDocument.Builder.create()
-                                         .statements(List.of(PolicyStatement.Builder.create()
+                                                 .statements(List.of(PolicyStatement.Builder.create()
                                                  .actions(actions)
                                                  .resources(List.of("*"))
                                                  .build()))
-            
-                                     .build();
+                                                 .build();
                                      
             CfnGroup.PolicyProperty policyProperty = CfnGroup.PolicyProperty.builder()
                                  .policyDocument(policy)
                                  .policyName("policyName"+groupname)
                                  .build();
+                                 
+            HashMap<String, Object> item = groups.get(i);
+            
+            if(item.containsKey("managedpolicies")){
+                List<String> managedpolicies = (List<String>)item.get("managedpolicies");
+                cfngroup.setManagedPolicyArns(managedpolicies);
+            }
                                            
             cfngroup.setPolicies(List.of(policyProperty));
             cfngroups.add(cfngroup);           

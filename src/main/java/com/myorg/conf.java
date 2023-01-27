@@ -22,6 +22,9 @@ public class conf {
         this.iam_group1.put("groupname", "group1");
         this.iam_group1.put("users",List.of("user1","user2","user3"));
         this.iam_group1.put("actions", List.of("s3:*","sagemaker:*","ec2:*"));
+        this.iam_group1.put("managedpolicies",List.of(
+            "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess"
+        ));
         
         // group2
         this.iam_group2.put("groupname","group2");
