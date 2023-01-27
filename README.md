@@ -14,7 +14,7 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
  * `cdk deploy`      deploy this stack to your default AWS account/region
  * `cdk diff`        compare deployed stack with current state
  * `cdk docs`        open CDK documentation
-
+# aws ec2 ubuntu AMI is used in this project !!!
 # install jenkins
 
 ```
