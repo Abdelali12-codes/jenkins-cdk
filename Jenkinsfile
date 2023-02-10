@@ -7,7 +7,6 @@ pipeline {
                 withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
                       
                           sh '''
-                          PATH=/opt/apache-maven-3.6.3/bin/:$PATH
                           cdk bootstrap
                           
                           '''
@@ -23,7 +22,6 @@ pipeline {
                 withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
                       
                           sh '''
-                          PATH=/opt/apache-maven-3.6.3/bin/:$PATH
                           cdk synth
                           '''
                     
@@ -37,7 +35,6 @@ pipeline {
                 withAWS(credentials: 'jenkins-cdk', region: 'us-east-2') {
                       
                           sh '''
-                          PATH=/opt/apache-maven-3.6.3/bin/:$PATH
                           cdk deploy --require-approval=never
                           '''
                     
